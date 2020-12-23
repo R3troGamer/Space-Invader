@@ -1,0 +1,77 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="l]gx#,}os4^TOlVnQ)/+">Proiettile</variable><variable id="1k*~Q`Xg4:wdeLemvx]B">Personaggio</variable><variable id="FM)]n?hhE[VPmM}fj7!E">Alieno</variable><variable id="_UsLdA2bJTy{jj)n[*UD">GameOverVar</variable></variables><block type="function_definition" x="10" y="10"><mutation name="sparo" functionid="9Sa+f^2dWQsP|;y-;hJs"/><field name="function_name">sparo</field><statement name="STACK"><block type="variables_set"><field name="VAR" id="l]gx#,}os4^TOlVnQ)/+">Proiettile</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . 7 7 . . . 
+. . 7 7 7 7 . . 
+. . 7 7 7 7 . . 
+. . 7 7 7 7 . . 
+. . 7 7 7 7 . . 
+. . 7 7 7 7 . . 
+. . . 7 7 . . . 
+. . . 7 7 . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="l]gx#,}os4^TOlVnQ)/+">Proiettile</field></block></value><value name="x"><shadow type="positionPicker"/><block type="Sprite_blockCombine_get"><field name="property">Sprite.x</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="1k*~Q`Xg4:wdeLemvx]B">Personaggio</field></block></value></block></value><value name="y"><shadow type="positionPicker"/><block type="Sprite_blockCombine_get"><field name="property">Sprite.y</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="1k*~Q`Xg4:wdeLemvx]B">Personaggio</field></block></value></block></value><next><block type="spritesetvel"><value name="sprite"><block type="variables_get"><field name="VAR" id="l]gx#,}os4^TOlVnQ)/+">Proiettile</field></block></value><value name="vx"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">-100</field></shadow></value></block></next></block></next></block></statement></block><block type="function_definition" x="10" y="10"><mutation name="GameOver" functionid="A3]`,:d4,YR*Y:JQydGR"/><field name="function_name">GameOver</field><statement name="STACK"><block type="variables_set"><field name="VAR" id="_UsLdA2bJTy{jj)n[*UD">GameOverVar</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+................................
+...cccccccccccccccccccccccccc...
+..caaaaaaaaaaaaaaaaaaaaaaaaaac..
+.caaaaaaaaaaaaaaaaaaaaaaaaaaaac.
+.caaaa88aaaaaaaaaaaaaaaaaaaaaac.
+.caaaa8988aaaaaaaaaaaaaaaaaaaac.
+.caaaa89998aaaaaaaaaaaaaaaaaaac.
+.caaaa8999988aaaaaaaaaaaaaaaaac.
+.caaaa89999998aaaaaaaaaaaaaaaac.
+.caaaa8999999988aaaaaaaaaaaaaac.
+.caaaa89999999998aaaaaaaaaaaaac.
+.caaaa8999e22299988aaaaaaaaaaac.
+.caaaa899e2222299998aaaaaaaaaac.
+.caaaa89e29999e2999988aaaaaaaac.
+.caaaa89e29999e29999998aaaaaaac.
+.caaaa89e29999e2999999988aaaaac.
+.caaaa89e22222229999999998aaaac.
+.caaaa89e22222229999999998aaaac.
+.caaaa89e29999e2999999988aaaaac.
+.caaaa89e29999e29999988aaaaaaac.
+.caaaa89e29999e299998aaaaaaaaac.
+.caaaa89999999999988aaaaaaaaaac.
+.caaaa899999999998aaaaaaaaaaaac.
+.caaaa89999999988aaaaaaaaaaaaac.
+.caaaa899999988aaaaaaaaaaaaaaac.
+.caaaa8999998aaaaaaaaaaaaaaaaac.
+.caaaa899988aaaaaaaaaaaaaaaaaac.
+.caaaa8988aaaaaaaaaaaaaaaaaaaac.
+.caaaa88aaaaaaaaaaaaaaaaaaaaaac.
+..caaaaaaaaaaaaaaaaaaaaaaaaaac..
+...cccccccccccccccccccccccccc...
+................................
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Food</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="_UsLdA2bJTy{jj)n[*UD">GameOverVar</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">80</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">60</field></shadow></value></block></next></block></statement></block><block type="spritesoverlap" x="10" y="10"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind"><field name="MEMBER">Enemy</field></shadow></value></block><block type="pxt-on-start" x="10" y="10"><statement name="HANDLER"><block type="gamesetbackgroundcolor"><value name="color"><shadow type="colorindexpicker"><field name="index">0</field></shadow></value><next><block type="variables_set"><field name="VAR" id="1k*~Q`Xg4:wdeLemvx]B">Personaggio</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 7 7 . . . . . . . 
+. . . . . . . 7 7 . . . . . . . 
+. . . . . . 7 7 7 7 . . . . . . 
+. . . . . . 7 7 7 7 . . . . . . 
+. . . . . 7 7 7 7 7 7 . . . . . 
+. . 7 7 7 7 7 7 7 7 7 7 7 7 . . 
+. 7 7 7 7 7 7 7 7 7 7 7 7 7 7 . 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="1k*~Q`Xg4:wdeLemvx]B">Personaggio</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">80</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">110</field></shadow></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><shadow type="variables_get"><field name="VAR" id="1k*~Q`Xg4:wdeLemvx]B">Personaggio</field></shadow></value><value name="vx"><shadow type="math_number"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">0</field></shadow></value><next><block type="particlesStartScreenAnimation"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><field name="effect">effects.starField</field><next><block type="function_call"><mutation name="CreaNemico" functionid="3fK4H+UB1XGx`MTaM{EM"/><next><block type="console_log"><value name="value"><shadow type="text"><field name="TEXT">collisione</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="function_definition" x="-10" y="410"><mutation name="CreaNemico" functionid="3fK4H+UB1XGx`MTaM{EM"/><field name="function_name">CreaNemico</field><statement name="STACK"><block type="device_while"><value name="COND"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow></value><statement name="DO"><block type="variables_set"><field name="VAR" id="FM)]n?hhE[VPmM}fj7!E">Alieno</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . 1 . . . . . . . . 1 . . . 
+. . . . 1 . . . . . . 1 . . . . 
+. . . . 1 1 1 1 1 1 1 1 . . . . 
+. . . 1 1 1 1 1 1 1 1 1 1 1 . . 
+. . 1 1 1 f 1 1 1 1 f 1 1 1 1 . 
+. 1 1 1 1 1 1 1 1 1 1 1 1 1 1 . 
+. 1 . 1 1 1 1 1 1 1 1 1 1 . 1 . 
+. 1 . 1 1 1 1 1 1 1 1 1 1 . 1 . 
+. 1 . 1 1 1 1 1 1 1 1 1 1 . 1 . 
+. . . 1 . . . . . . . . 1 . . . 
+. . . . 1 1 1 . . 1 1 1 . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="FM)]n?hhE[VPmM}fj7!E">Alieno</field></block></value><value name="x"><shadow type="positionPicker"/><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">160</field></shadow></value></block></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow></value><next><block type="spritesetvel"><value name="sprite"><block type="variables_get"><field name="VAR" id="FM)]n?hhE[VPmM}fj7!E">Alieno</field></block></value><value name="vx"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">100</field></shadow></value><next><block type="device_pause"><value name="pause"><shadow type="timePicker"><field name="ms">1000</field></shadow></value></block></next></block></next></block></next></block></statement></block></statement></block><block type="keyonevent" x="906" y="401"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="function_call"><mutation name="sparo" functionid="9Sa+f^2dWQsP|;y-;hJs"/></block></statement></block><block type="spritesoverlap" x="1204" y="401"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Projectile</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind"><field name="MEMBER">Enemy</field></shadow></value><statement name="HANDLER"><block type="spritedestroy"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></block></value><next><block type="spritedestroy"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></block></value></block></next></block></statement></block></xml>
