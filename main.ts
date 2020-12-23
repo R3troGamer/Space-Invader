@@ -46,7 +46,6 @@ function CreaNemico () {
 })
 }
 function CreaNemico2 () {
-    forever(function() {
         Alieno2 = sprites.create(img`
             . . 1 . . . . 1 . .
             1 . . 1 1 1 1 . . 1
@@ -60,7 +59,6 @@ function CreaNemico2 () {
         Alieno2.setPosition(randint(0, 160), 0)
         Alieno2.setVelocity(0, 50)
         pause(2000)
-})
 }
 function GameOver() {
     GameOverVar = sprites.create(img`
@@ -110,11 +108,6 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     sparo()
-})
-forever(function() {
-    if (punti >= 10) {
-        CreaNemico2()
-}
 })
 //eventi
 scene.setBackgroundColor(0)
