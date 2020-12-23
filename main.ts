@@ -45,21 +45,6 @@ function CreaNemico () {
         pause(1000)
 })
 }
-function CreaNemico2 () {
-        Alieno2 = sprites.create(img`
-            . . 1 . . . . 1 . .
-            1 . . 1 1 1 1 . . 1
-            1 . 1 f 1 1 f 1 . 1
-            1 1 1 f 1 1 f 1 1 1
-            . 1 1 1 1 1 1 1 1 .
-            . 1 1 1 1 1 1 1 1 .
-            . 1 . 1 . . 1 . 1 .
-            1 1 . . . . . . 1 1
-        `, SpriteKind.Enemy)
-        Alieno2.setPosition(randint(0, 160), 0)
-        Alieno2.setVelocity(0, 50)
-        pause(2000)
-}
 function GameOver() {
     GameOverVar = sprites.create(img`
         ................................
